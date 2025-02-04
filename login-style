@@ -1,0 +1,23 @@
+.all{
+  font:Arial;
+
+}
+#vpass, #vem,#vbutton{
+  border-width:0.1px;
+  background-color:red;
+  color:white;
+  border-color:white;
+}
+#usrn, #pass,#sub,#vpass, #vem,#vbutton{
+  border-width:0.1px;
+  border-radius:5px;
+  accent-color:red;
+  border-color:black;
+}
+#list,#encode,#other{ 
+  border-radius:50px;
+  border-color:red;
+  accent-color:yellow;
+border-width:10px;
+
+}
