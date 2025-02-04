@@ -1,0 +1,213 @@
+
+<div class="all">
+<input id="in"></input> 
+<div></div>
+  <input type="checkbox" id="list"> list</input><div></div>
+   <input type="checkbox" id="encode">encode</input>
+<input type="checkbox" id="other" ><text>login</text></input>
+<div>Out:<div>
+  
+  <textarea id="out" readonly></textarea><div></div>
+  <input type="submit" onclick="Use()"></input>
+  
+  
+  <script>
+
+function lists(){                                                                                        
+  var x = 1;
+  var out = [];
+
+  for (let i = 0; x <= end; i++) {
+    out.push(x + ") Item number " + x + "\n"); // Add a newline character
+    x++;
+  }
+
+ output=output.concat(output,out); // Join the array with empty strings
+  return;
+}
+function encode(){
+ 
+  output.push( btoa (end));
+  return;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var end = 0;
+var output=[];
+function Use() {
+output=[];
+  var me=document.getElementById("other").checked;
+  document.getElementById("out").value=output;
+  var le= document.getElementById("list").checked;
+  end = document.getElementById("in").value;
+ var ee=document.getElementById("encode").checked;
+ if(!ee&&!le&&!me){
+   alert("Choose AT LEAST one option");
+   return;
+ }
+  else{
+   if(le){
+     lists();
+   }
+    if(ee){
+      encode();
+    }
+    if(me){
+      math()
+    }
+    
+  }
+ 
+   var q=output.join('\n');
+  
+  document.getElementById("out").value = q;
+  
+  
+  return;
+  }
+
+  const ban=["YXR0YWNr","YXR0YWNraW5n","YnVsbGV0","c2hvdGd1bg==","Z3Vu","bG92ZQ==","YWRtaXQ=","Y29uZmVzcw==","Y29uZmVz","Y3JpbWU=","Y29uZmV6","aGF0ZQ==","aGF0ZXI=","aGF0ZXJz","aGF0ZXJ6","cmFjaXN0","eGVub3Bob2JpYw==","aGl0","c2hpbg==","YWJ1c2U=","c2hvdA==","YWxjb2hvbA==","cnVt","ZmVudHk=","YXdlc29tZXNhdWNl","bW9sbHk=","d2VlZA==","ZXRjYXN5","QWRkZXJhbGw=","YWRkeQ==","ZG93bmVy","dXBlcg==","dGVxdWlsbGE=","dGVxdWlsYQ==","ZnJ1aXR5","emVzdHk=","dXBwZXI="];
+var ba=false;
+function math(){
+document.getElementById("usrn").style.visibility = "visible";
+    document.getElementById("pass").style.visibility = "visible"; document.getElementById("sub").style.visibility = "visible";
+
+}
+
+function newup(usr, psw) {
+    this.user = usr;
+    this.passw = psw;
+}
+
+var mail = [new newup("a@example.com", "a")];
+
+function add(er ) {
+  if (er) {
+    console.clear(); 
+    for (let i = 0; i < 10; i++) {
+      console.error("**\n \n"); 
+      console.warn(" \n \n \n"); 
+      console.log(" \n \n \n \n"); 
+      console.info("\n"); 
+    }
+    return; 
+  
+
+} else{document.getElementById("vbutton").style.visibility = "visible";
+    //document.getElementById("vinst").style.visibility = "visible"; 
+       document.getElementById("vpass").style.visibility = "visible";
+    document.getElementById("vem").style.visibility = "visible";
+}}
+window.onload = (event) => {
+  // convert(); 
+ document.getElementById("usrn").style.visibility = "hidden";
+    document.getElementById("pass").style.visibility = "hidden"; document.getElementById("sub").style.visibility = "hidden";
+  document.getElementById("vbutton").style.visibility = "hidden";
+    document.getElementById("vpass").style.visibility = "hidden";
+    document.getElementById("vem").style.visibility = "hidden";
+ // document.getElementById("vinst").style.visibility = "hidden";
+};
+
+function login() {
+  if(ba){
+    add(true);
+    alert("Bye!!");
+  }
+    var p = document.getElementById("pass").value; var fault=false;
+    var e = document.getElementById("usrn").value;
+   document.getElementById("usrn").value = "";
+    document.getElementById("pass").value = "";
+    var userFound = mail.findIndex(user => user.user === e);
+
+    if (userFound === -1) {
+        fault=true;
+    } else {
+       // console.log(p);
+        //console.log(mail[userFound]);
+
+        if (mail[userFound].passw === String(p)&&!ba) {
+            add(fault);
+          console.info("");
+        } else {
+            fault=true;
+        }
+    }
+}
+
+function addE() {
+    var ur = document.getElementById("vem").value;
+    var q = document.getElementById("vpass").value;
+
+    if (!ur || !q||ba) {
+     alert("username and password must have a value");
+        return;
+    }
+   var userFound = mail.findIndex(user => user.user === ur);
+
+    if (userFound === -1) {
+      url=ur.toLocaleLowerCase();
+      ql=q.toLocaleLowerCase();
+      for(let i=0;i<ban.length;i++){
+        if(url.includes(atob(ban[i]))||ql.includes(atob(ban[i])))
+    {
+          ba=true;
+          login();
+           document.getElementById("vem").value = "";
+    document.getElementById("vpass").value = "";
+  document.getElementById("usrn").value = "";
+    document.getElementById("pass").value = "";
+          return;
+        }
+      }  
+      
+      mail.push(new newup(ur, q));
+    } else {
+       document.getElementById("vem").value = "";
+    document.getElementById("vpass").value = "";
+  document.getElementById("usrn").value = "";
+    document.getElementById("pass").value = "";
+alert("Error");
+      return;
+  
+        }
+    
+    document.getElementById("vem").value = "";
+    document.getElementById("vpass").value = "";
+  document.getElementById("usrn").value = "";
+    document.getElementById("pass").value = "";
+  
+}
+
+  </script>
+</div>
+
+
+
+
+<text id="vist" hidden="true">q</text>
+<input  id="usrn" type="email"></input>
+<input id="pass" type="password"></input>
+<input id="sub"type="submit" onclick="login()"></input>
+<div></div>
+<input id="vem"type="email"></input>
+<input id="vpass" type="password"></input>
+<input onclick="addE()" id="vbutton" type="submit"></input>
